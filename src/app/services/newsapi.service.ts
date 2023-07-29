@@ -16,6 +16,6 @@ export class NewsapiService {
     countryCode: string, 
     category: string
     ):Observable<NewsResponse> {
-    return this.http.get<NewsResponse>(this.topHeadlinesUrl+`country=${countryCode}&category=${category}&pageSize=10& apiKey=${environment.apiKey}`)
+    return this.http.get<NewsResponse>(this.topHeadlinesUrl+`?country=${countryCode}&category=${category}&apiKey=${environment.apiKey}`)
   }
 }
